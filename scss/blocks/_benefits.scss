@@ -1,0 +1,56 @@
+.benefits {
+    padding: 120px 0;
+}
+
+.benefits_grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+
+
+    @include tablet(){
+        grid-template-columns: repeat(2,1fr);
+        gap:40px 20px;
+    }
+    @include mobile-xs(){
+        grid-template-columns: repeat(1,1fr);
+        gap:40px 20px;
+    }
+}
+.benefits_title {
+    font-size: 42px;
+    font-weight: 700;
+    max-width: 260px;
+}
+.benefit {
+}
+.benefit_title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+}
+.benefit_text {
+    margin-bottom: 14px;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.85;
+}
+.read-more{
+
+        color:var(--accent);
+        font-size:14px;
+        font-weight: 400;
+        line-height: 1.85;
+        display: flex;
+        gap:13px;
+        align-items: center;
+        
+    
+        &::after{
+            content:url('./../img/icons/Vector-right.svg');
+            height: 24px;
+        }
+    
+   
+}

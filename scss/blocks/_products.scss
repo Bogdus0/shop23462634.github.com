@@ -1,0 +1,43 @@
+.products {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+}
+
+.products_title {
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0em;
+   
+
+}
+.products_tabs {
+    margin-bottom: 80px;
+    text-align: center;
+}
+.products_slider {
+    margin-bottom: 60px;
+    padding: 0 40px;
+    
+}
+.products_link{
+    text-align: center;
+    
+}
+.view{
+    color:var(--accent);
+    font-size:16px;
+    font-weight: 500;
+    line-height: 1.85;
+    align-items: center;
+    
+
+    &::after{
+        content:url('./../img/icons/Vector-right.svg');
+        height: 24px;
+    }
+
+
+}

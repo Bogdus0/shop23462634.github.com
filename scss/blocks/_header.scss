@@ -1,0 +1,223 @@
+.header{
+    position: relative;
+    background-color: var(--footer-bg);
+    background-image: url('./../img/header/header-bg.jpg');
+    aspect-ratio: 1440/ 1084;
+    background-size: cover;
+    
+    
+
+    @include mobile-xs{
+        padding-top: 20px;
+        padding-bottom: 240px;
+        background-position: center;
+        aspect-ratio: unset;
+
+    }
+
+   
+    
+}
+a{
+    color:var(--header-text-color);
+
+}
+.header_nav{
+    margin-bottom: clamp(20px, -0.25rem + 7.5vw, 80px);
+}
+.header_content {
+    text-align: center;
+    color:var(--header-text-color);
+
+}
+.header_content p{
+    font-size: clamp(16px, 0.818rem + 0.91vw, 24px);
+    text-wrap: balance;
+    line-height: 160%;
+    font-weight: 300;
+    max-width: 606px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+.header_title {
+    margin-bottom: 14px;
+    font-weight: 700;
+    //font-size: 80px;
+    text-wrap: balance;
+    font-size: clamp(28px, -0.114rem + 6.82vw,80px);
+    line-height: 130%;
+    letter-spacing: -0.8px;
+    text-transform: capitalize;
+
+}
+.search-form {
+    display: flex;
+    max-width: 344px;
+    padding: 8px 8px 8px 20px;
+    justify-content: space-between;
+    align-items: center;
+   
+
+    border-radius: 42px;
+    border: 0.870px solid rgba(255,255, 255, 0.6);
+    background: rgba(255,255, 255, 0.15);
+    backdrop-filter: blur(5px);
+
+    gap: 10px;
+
+
+}
+.search-form_input {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    flex-grow: 1;
+&::placeholder{
+    color: #fff;
+    font-weight: 400;
+
+}
+}
+.search-form_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+.header_search{
+    margin: 45px auto 0;
+    @include mobile-xs(){
+        display: none;
+    }
+   
+   
+}
+.info-dot{
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+.info-dot:hover .info-dot_radius{
+    animation: pulse 1s infinite alternate paused;
+
+}
+.info-dot:hover .info-dot_circle{
+    background-color: var(--accent);
+}
+.info-dot_circle{
+    z-index: 1;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    background-color:#fff;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.2s ease-in;
+    
+}
+.info-dot_radius{
+    width: 32px;
+    height: 32px;
+
+    border: 0.86px solid #fff;
+    border-radius: 50%;
+    background: rgba(255,255, 255, 0.2);
+    backdrop-filter: blur(5px);
+
+    animation: pulse 1s infinite alternate;
+    
+
+}
+.header_dot{
+    position: absolute;
+
+
+    @include mobile-xl(){
+        display: none;
+    }
+
+
+}
+.header_dot--sofa{
+    left:20.5%;
+    top:65%;
+}
+.header_dot--vase{
+    left: 7.2%;
+    top: 68%;
+}
+.header_dot--item{
+    left: 55%;
+    top: 71%;
+}
+.header_dot--wall{
+    right:2.4%;
+    top:75.5%;
+}
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+.info-hint{
+    display: flex;
+    padding-top: 12px;
+    gap: 8px;
+    background-image: url('./../img/icons/Union.svg');
+    width: 112px;
+    height: 56px;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%,-70%);
+
+}
+
+.info-hint_radio {
+    clip:rect(0 0 0 0) ;
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+}
+.info-hint_radio:checked +.info-hint_radio_fake{
+    background-image: url('./../img/icons/Vector.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.info-hint_radio_fake {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px;
+    background-color: var(--accent);
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    
+    
+    &--accent {
+        background-color: var(--accent);
+    }
+
+    &--beruse {
+        background-color: var(--beruse);
+    }
+
+    &--gray {
+        background-color: var(--gray);
+    }
+    
+}

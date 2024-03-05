@@ -1,0 +1,39 @@
+:root{
+    --textColor:#1e1e1e;
+    --accent:#e58411;
+    --header-text-color:#fff;
+    --beruse:#00D6C9;
+    --gray:#7C7C7C;
+    --text-muted:#8d8d8d;
+    --text-card-dark-blue:#0d1b39;
+    --footer-bg:#2D2F33;
+
+    --font-main:'Gilroy',sans-serif;
+    --font-cards:'Inter',sans-serif;
+}
+
+body {
+    color: var(--textColor);
+}
+
+
+@mixin tablet{
+    @media(max-width:1024px){
+       @content;
+        
+    }
+
+}
+
+@mixin mobile-xl{
+    @media(max-width: 819px){
+       @content;
+        
+    }
+}
+@mixin mobile-xs{
+    @media(max-width: 630px){
+       @content;
+        
+    }
+}

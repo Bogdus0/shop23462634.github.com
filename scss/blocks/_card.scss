@@ -1,0 +1,103 @@
+.card {
+    width: 268px;
+    position: relative;
+}
+.card_link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+.card_foto {
+    height: 240px;
+    background-color: #fafafa;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    margin-top: 50px;
+}
+.card_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: #fff;
+    border-radius:   0 0 20px 20px;
+    padding: 14px 22px 28px;
+    height: 202px;
+   
+
+    font-family: Inter;
+
+}
+.card_img{
+    margin-top: -50px;
+
+}
+.card_category {
+    color: #8d8d8d;
+    position: relative;
+    z-index: 3;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+.card_title {
+    color: #0d1b39;
+    font-size: 22px;
+    font-weight: 600;
+}
+.card_rating {
+    display: flex;
+    gap: 3px;
+}
+.card_footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_price {
+    position: relative;
+    padding-left: 14px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #0d1b39;
+    
+    &::before{
+        content: "$";
+
+        position: absolute;
+        left:0 ;
+        top:0;
+        font-size: 15px;
+
+        
+    }
+
+}
+.card_btn {
+    width: 48px;
+    height: 48px;
+    background-color: #0d1b39;
+    border-radius: 50%;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 3;
+
+    transition: opacity 0.2s ease-in;
+
+    &:hover{
+        opacity: 0.8;
+
+    }
+
+
+}
